@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="cat">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-analytics.js"></script>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <title>SonaBaix 2021</title>
+</head>
+
+<body>
+    <nav class="navbar justifyContent" style="background-color: rgba(145, 0, 0, 0.493);">
+        <a class="navbar-brand">
+            <img src="img/SonaBaix_imagotip_horitzontal.png" width="300" alt="">
+        </a>
+        
+    </nav>
+    <br>
+    <a class="cartIcon comandaToggle p-2">
+        <img class="cartIconImage" src="img/shopping-cart.png" alt="">
+        <br>
+    </a>
+    <span class="totalItems p-2"></span>
+
+    <div class="carta container p-3" id="carta">
+        <h2>Productes disponibles</h2>
+        <div class="productes row row-cols-1 row-cols-md-5 p-3">
+
+        </div>
+
+    </div>
+
+    <div class="comanda-container mt-2 pb-2">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Producte</th>
+                    <th scope="col">Preu</th>
+
+                </tr>
+            </thead>
+            <tbody class="comanda">
+
+
+            </tbody>
+        </table>
+        <table class="table">
+            <tr>
+                <td class="total"></td>
+            </tr>
+        </table>
+        <form class="form-inline p-3">
+            <div class="form-group">
+              <label for="inputTable" style="font-weight: 700;">Introdueix la teva taula</label>
+              <input type="number" id="inputTable" class="form-control mx-sm-3">
+            </div>
+          </form>
+        <div class="demanaComanda p-2 m-2">Fes la comanda</div>
+
+
+    </div>
+
+
+
+
+    <script src="comanda.js"></script>
+    <script src="firestore.js"></script>
+
+</body>
+
+</html>
